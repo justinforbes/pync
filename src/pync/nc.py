@@ -10,6 +10,7 @@ import contextlib
 import errno
 import itertools
 import logging
+import pkg_resources
 import random
 import select
 import shlex
@@ -1550,6 +1551,10 @@ class NetcatArgumentParser(GroupingArgumentParser):
         return argparse.Namespace(**kwargs)
 
 
+class NetcatPlugin(object):
+    pass
+
+
 class Netcat(object):
     """
     Factory class that returns the correct Netcat object based
@@ -1654,6 +1659,13 @@ class Netcat(object):
 
     def __new__(cls, dest='', port=None, l=False, u=False, p=None,
             stdin=None, stdout=None, stderr=None, **kwargs):
+        plugins = dict()
+        for entry_point in pkg_resources.iter_entry_points('pync_plugins'):
+            plugins[entry_point.name] = entry_point.load()
+        
+        for p in plugins.values():
+            pass
+
         stdin = stdin or cls.stdin
         stdout = stdout or cls.stdout
         stderr = stderr or cls.stderr
