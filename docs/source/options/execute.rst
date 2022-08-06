@@ -2,6 +2,10 @@
 [--exec]uting Commands
 =====================
 
+> **Note**
+> By default, **pync** is installed without the **--exec** command.
+> To enable the **--exec** command, please install the **pync-exec** addon.
+
 Using the `--exec <https://pync.readthedocs.io/en/latest/options/execute.html>`_
 option, you can execute commands over Netcat's connection.
 
