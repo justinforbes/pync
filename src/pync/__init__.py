@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from .nc import (
+import pkg_resources
+import sys
+
+from .netcat import (
         pync,
         Netcat,
         NetcatArgumentParser,
@@ -8,7 +11,12 @@ from .nc import (
         NetcatClient, NetcatServer,
         NetcatTCPClient, NetcatTCPServer, NetcatTCPConnection,
         NetcatUDPClient, NetcatUDPServer, NetcatUDPConnection,
-        Process, StopReadWrite, ConnectionRefused,
+        StopReadWrite, ConnectionRefused,
         ConsoleInput,
 )
+
+self = sys.modules[__name__]
+for entry_point in pkg_resources.iter_entry_points('pync_plugins'):
+    plugin = entry_point.load()
+    plugin(self)
 
