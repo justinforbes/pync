@@ -4,7 +4,7 @@ Remote Command Execution
 
 .. note::
    | By default, **pync** is installed without the **--exec** command.
-   | To enable the **--exec** command, please install the **pync-exec** addon.
+   | To enable the **--exec** command, please install the `pync-exec <https://github.com/brenw0rth/pync-exec>`_ addon.
 
 Using the `--exec <https://pync.readthedocs.io/en/latest/options/execute.html>`_
 option, we can execute a command and connect it's stdin/stdout/stderr
