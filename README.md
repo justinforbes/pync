@@ -87,8 +87,8 @@ py -m pip install https://github.com/brenw0rth/pync/archive/main.zip
 ```
 </details>
 
-If you wish to install **pync** with the **--exec** command, you need
-to install the **pync-exec** addon:
+By default, **pync** is installed without the **--exec** command.<br>
+To add the **--exec** command, install the **pync-exec** addon:
 
 <details open>
 <summary>Unix</summary>
