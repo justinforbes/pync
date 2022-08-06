@@ -24,8 +24,8 @@
 <summary>Unix</summary>
 
 ```sh
-pync [-46bCDdhklnruvz] [--exec command] [-I length] [-i interval]
-     [-O length] [-P proxy_username] [-p source_port] [-q seconds]
+pync [-46bCDdhklnruvz] [-I length] [-i interval] [-O length]
+     [-P proxy_username] [-p source_port] [-q seconds]
      [-s source] [-T toskeyword] [-w timeout] [-X proxy_protocol]
      [-x proxy_address[:port]] [dest] [port]
 ```
@@ -35,8 +35,8 @@ pync [-46bCDdhklnruvz] [--exec command] [-I length] [-i interval]
 <summary>Windows</summary>
 
 ```sh
-py -m pync [-46bCDdhklnruvz] [--exec command] [-I length] [-i interval]
-           [-O length] [-P proxy_username] [-p source_port] [-q seconds]
+py -m pync [-46bCDdhklnruvz] [-I length] [-i interval] [-O length]
+           [-P proxy_username] [-p source_port] [-q seconds]
            [-s source] [-T toskeyword] [-w timeout] [-X proxy_protocol]
            [-x proxy_address[:port]] [dest] [port]
 ```
@@ -47,8 +47,8 @@ py -m pync [-46bCDdhklnruvz] [--exec command] [-I length] [-i interval]
 
 ```python
 from pync import pync
-args = '''[-46bCDdhklnruvz] [--exec command] [-I length] [-i interval]
-          [-O length] [-P proxy_username] [-p source_port] [-q seconds]
+args = '''[-46bCDdhklnruvz] [-I length] [-i interval] [-O length]
+          [-P proxy_username] [-p source_port] [-q seconds]
           [-s source] [-T toskeyword] [-w timeout] [-X proxy_protocol]
           [-x proxy_address[:port]] [dest] [port]'''
 pync(args, stdin, stdout, stderr)
