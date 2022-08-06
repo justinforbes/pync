@@ -2,6 +2,11 @@
 Remote Command Execution
 ========================
 
+> **Note**
+> **pync** is installed without this functionality.
+> If you wish to add the **--exec** command, please install the **pync-exec**
+> addon after installing **pync**.
+
 Using the `--exec <https://pync.readthedocs.io/en/latest/options/execute.html>`_
 option, we can execute a command and connect it's stdin/stdout/stderr
 to the network socket.
